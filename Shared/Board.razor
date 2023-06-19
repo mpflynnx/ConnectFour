@@ -20,6 +20,13 @@
 	<span title="Click to play a piece" @onclick="() => PlayPiece(6)">🔽</span>
 </nav>
 
+<article>
+	@WinnerMessage  <button style="@ResetStyle" @onclick="ResetGame">Reset the game</button>
+	<br />
+	<span class="alert-danger">@ErrorMessage</span>
+	<span class="alert-info">@CurrentTurn</span>
+</article>
+
 <div>
     <div class="board">
         @for (var i = 0; i < 42; i++)
